@@ -4,6 +4,9 @@
 /idea
 .idea
 
+# Sass
+src/**/*.css
+
 # dependencies
 /node_modules
 
