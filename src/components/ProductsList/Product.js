@@ -37,18 +37,26 @@ class Product extends React.Component{
         };
         this.handleClickScout = this.handleClickScout.bind(this);
         this.handleClickDomino = this.handleClickDomino.bind(this);
+        this.handleClickBebop = this.handleClickBebop.bind(this);
+        this.handleClickJetty = this.handleClickJetty.bind(this);
     }
 
 
     handleClickScout () {
         const { product } = this.props;
-        console.log(`${product.images.scout}`);
         this.setState({image: `${product.images.scout}`})
     }
     handleClickDomino () {
         const { product } = this.props;
-        console.log(`${product.images.domino}`);
         this.setState({image: `${product.images.domino}`})
+    }
+    handleClickBebop () {
+        const { product } = this.props;
+        this.setState({image: `${product.images.bebop}`})
+    }
+    handleClickJetty () {
+        const { product } = this.props;
+        this.setState({image: `${product.images.jetty}`})
     }
 
     render () {
@@ -56,7 +64,6 @@ class Product extends React.Component{
         return (
             <Grid item>
                 <Card className={classes.card}>
-                    {console.log(`${product.images.domino}`)}
                     <CardMedia
                         className={classes.media}
                         image={`/static/images/products/${product.category}/${this.state.image}`}
@@ -78,8 +85,6 @@ class Product extends React.Component{
                             variant="fab"
                             color="primary"
                             aria-label="add"
-                            value='domino'
-                            name="domino"
                             onClick={this.handleClickDomino}
                         >d</Button>
                         <Button
@@ -90,6 +95,22 @@ class Product extends React.Component{
                             aria-label="add"
                             onClick={this.handleClickScout}
                         >s</Button>
+                        <Button
+                            className={classes.button}
+                            mini
+                            variant="fab"
+                            color="primary"
+                            aria-label="add"
+                            onClick={this.handleClickBebop}
+                        >b</Button>
+                        <Button
+                            className={classes.button}
+                            mini
+                            variant="fab"
+                            color="primary"
+                            aria-label="add"
+                            onClick={this.handleClickJetty}
+                        >j</Button>
                     </CardActions>
                 </Card>
             </Grid>
