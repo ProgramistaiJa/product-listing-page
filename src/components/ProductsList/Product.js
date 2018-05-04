@@ -33,7 +33,8 @@ class Product extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            image: props.product.images.domino
+            image: props.product.domino.image,
+            price: props.product.domino.price
         };
         this.handleClickScout = this.handleClickScout.bind(this);
         this.handleClickDomino = this.handleClickDomino.bind(this);
@@ -44,19 +45,31 @@ class Product extends React.Component{
 
     handleClickScout () {
         const { product } = this.props;
-        this.setState({image: `${product.images.scout}`})
+        this.setState({
+            image: `${product.scout.image}`,
+            price: `${product.scout.price}`
+        })
     }
     handleClickDomino () {
         const { product } = this.props;
-        this.setState({image: `${product.images.domino}`})
+        this.setState({
+            image: `${product.domino.image}`,
+            price: `${product.domino.price}`
+        })
     }
     handleClickBebop () {
         const { product } = this.props;
-        this.setState({image: `${product.images.bebop}`})
+        this.setState({
+            image: `${product.bebop.image}`,
+            price: `${product.bebop.price}`
+        })
     }
     handleClickJetty () {
         const { product } = this.props;
-        this.setState({image: `${product.images.jetty}`})
+        this.setState({
+            image: `${product.jetty.image}`,
+            price: `${product.jetty.price}`
+        })
     }
 
     render () {
@@ -74,8 +87,7 @@ class Product extends React.Component{
                             {product.name}
                         </Typography>
                         <Typography component="p">
-                            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                            across all continents except Antarctica
+                            {this.state.price}
                         </Typography>
                     </CardContent>
                     <CardActions>

@@ -2,41 +2,102 @@ export const products = [
     {
         name: "Bag",
         category: "bags",
-        images: {
-            bebop: "CardKeeper-Bebop-Back.png",
-            domino: "CardKeeper-Domino-Back.png",
-            jetty: "CardKeeper-Jetty-Back.png",
-            scout: "CardKeeper-Scout-Back.png"
+        bebop: {
+            image:"CardKeeper-Bebop-Back.png",
+            price: "bbb"
+        },
+        domino: {
+            image: "CardKeeper-Domino-Back.png",
+            price: "ddd"
+        },
+        jetty: {
+            image: "CardKeeper-Jetty-Back.png",
+            price: "jjj"
+        },
+        scout: {
+            image: "CardKeeper-Scout-Back.png",
+            price: "sss"
         }
     },
     {
         name: "Card Keeper",
         category: "accessories",
-        images: {
-            bebop: "CardKeeper-Bebop-Back.png",
-            domino: "CardKeeper-Domino-Back.png",
-            jetty: "CardKeeper-Jetty-Back.png",
-            scout: "CardKeeper-Scout-Back.png"
+        bebop: {
+            image: "CardKeeper-Bebop-Back.png",
+            price: "bbb"
+        },
+        domino: {
+            image: "CardKeeper-Domino-Back.png",
+            price: "ddd"
+        },
+        jetty: {
+            image: "CardKeeper-Jetty-Back.png",
+            price: "jjj"
+        },
+        scout: {
+            image: "CardKeeper-Scout-Back.png",
+            price: "sss"
         }
     },
     {
-        name: "Backpack",
+        name: "Small Backpack",
         category: "backpacks",
-        images: {
-            bebop: "Small-Bpk-Bebop.png",
-            domino: "Small-Bpk-Domino.png",
-            jetty: "Small-Bpk-Jetty.png",
-            // scout: "CardKeeper-Scout-Back.png"
-        }
+        bebop: {
+            image: "Small-Bpk-Bebop.png",
+            price: "bbb"
+        },
+        domino: {
+            image: "Small-Bpk-Domino.png",
+            price: "ddd"
+        },
+        jetty: {
+            image: "Small-Bpk-Jetty.png",
+            price: "jjj"
+        },
+        // scout: {
+        //     image: "CardKeeper-Scout-Back.png",
+        //     price: "sss"
+        // }
+
     },
     {
         name: "Accessory",
         category: "accessories",
-        images: {
-            bebop: "blue1.png",
-            domino: "brown1.png",
-            jetty: "red1(1).png",
-            scout: "CardKeeper-Scout-Back.png"
+        bebop: {
+            image: "CardKeeper-Bebop-Back.png",
+            price: "bbb"
+        },
+        domino: {
+            image: "CardKeeper-Domino-Back.png",
+            price: "ddd"
+        },
+        jetty: {
+            image: "CardKeeper-Jetty-Back.png",
+            price: "jjj"
+        },
+        scout: {
+            image: "CardKeeper-Scout-Back.png",
+            price: "sss"
+        }
+    },
+    {
+        name: "Crossbody Capsule",
+        category: "bags",
+        bebop: {
+            image: "Crossbody-Bebop.png",
+            price: "bbb"
+        },
+        domino: {
+            image: "Crossbody-Domino.png",
+            price: "ddd"
+        },
+        jetty: {
+            image: "Crossbody-Jetty.png",
+            price: "jjj"
+        },
+        scout: {
+            image: "Crossbody-Scout.png",
+            price: "sss"
         }
     }
 ];
