@@ -1,10 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
+import {withStyles, MuiThemeProvider, createMuiTheme} from 'material-ui/styles';
+import classNames from 'classnames';
 import Grid from 'material-ui/Grid';
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
+import Card, {CardActions, CardContent, CardMedia} from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
+import orange from 'material-ui/colors/orange';
+import red from 'material-ui/colors/red';
+import grey from 'material-ui/colors/grey';
+import indigo from 'material-ui/colors/indigo';
 
 const styles = theme => ({
     root: {
@@ -18,7 +23,7 @@ const styles = theme => ({
         color: theme.palette.text.secondary,
     },
     card: {
-        maxWidth: 345,
+        maxWidth: 400,
     },
     media: {
         height: 0,
@@ -26,11 +31,41 @@ const styles = theme => ({
     },
     button: {
         margin: theme.spacing.unit,
+
+    },
+    cssScout: {
+        color: theme.palette.getContrastText(orange[500]),
+        backgroundColor: orange[500],
+        '&:hover': {
+            backgroundColor: orange[700],
+        },
+    },
+    cssDomino: {
+        color: theme.palette.getContrastText(grey[800]),
+        backgroundColor: grey[800],
+        '&:hover': {
+            backgroundColor: grey[900],
+        },
+    },
+    cssBebop: {
+        color: theme.palette.getContrastText(red[600]),
+        backgroundColor: red[600],
+        '&:hover': {
+            backgroundColor: red[700],
+        },
+    },
+    cssJetty: {
+        color: theme.palette.getContrastText(indigo[600]),
+        backgroundColor: indigo[600],
+        '&:hover': {
+            backgroundColor: indigo[700],
+        },
     },
 });
 
-class Product extends React.Component{
-    constructor(props){
+
+class Product extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             image: props.product.domino.image,
@@ -43,37 +78,40 @@ class Product extends React.Component{
     }
 
 
-    handleClickScout () {
-        const { product } = this.props;
+    handleClickScout() {
+        const {product} = this.props;
         this.setState({
             image: `${product.scout.image}`,
             price: `${product.scout.price}`
         })
     }
-    handleClickDomino () {
-        const { product } = this.props;
+
+    handleClickDomino() {
+        const {product} = this.props;
         this.setState({
             image: `${product.domino.image}`,
             price: `${product.domino.price}`
         })
     }
-    handleClickBebop () {
-        const { product } = this.props;
+
+    handleClickBebop() {
+        const {product} = this.props;
         this.setState({
             image: `${product.bebop.image}`,
             price: `${product.bebop.price}`
         })
     }
-    handleClickJetty () {
-        const { product } = this.props;
+
+    handleClickJetty() {
+        const {product} = this.props;
         this.setState({
             image: `${product.jetty.image}`,
             price: `${product.jetty.price}`
         })
     }
 
-    render () {
-        const { product, classes } = this.props;
+    render() {
+        const {product, classes} = this.props;
         return (
             <Grid item>
                 <Card className={classes.card}>
@@ -92,7 +130,7 @@ class Product extends React.Component{
                     </CardContent>
                     <CardActions>
                         <Button
-                            className={classes.button}
+                            className={classNames(classes.button, classes.cssDomino)}
                             mini
                             variant="fab"
                             color="primary"
@@ -100,26 +138,26 @@ class Product extends React.Component{
                             onClick={this.handleClickDomino}
                         >d</Button>
                         <Button
-                            className={classes.button}
+                            className={classNames(classes.button, classes.cssScout)}
                             mini
                             variant="fab"
-                            color="primary"
+                            color="scout"
                             aria-label="add"
                             onClick={this.handleClickScout}
                         >s</Button>
                         <Button
-                            className={classes.button}
+                            className={classNames(classes.button, classes.cssBebop)}
                             mini
                             variant="fab"
-                            color="primary"
+                            color="bebop"
                             aria-label="add"
                             onClick={this.handleClickBebop}
                         >b</Button>
                         <Button
-                            className={classes.button}
+                            className={classNames(classes.button, classes.cssJetty)}
                             mini
                             variant="fab"
-                            color="primary"
+                            color="jetty"
                             aria-label="add"
                             onClick={this.handleClickJetty}
                         >j</Button>
