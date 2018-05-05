@@ -36,11 +36,11 @@ class Product extends React.Component {
                         title={`${product.name}`}
                     />
                     <CardContent>
-                        <Typography gutterBottom variant="headline" component="h2">
+                        <Typography gutterBottom variant="headline" component="h2" align="center">
                             {product.name}
                         </Typography>
-                        <Typography component="p">
-                            {this.state.price}
+                        <Typography component="p" align="center">
+                            {this.state.price} zł
                         </Typography>
                     </CardContent>
                     <ColorsButtons

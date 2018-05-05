@@ -7,19 +7,20 @@ export const styles = theme => ({
     root: {
         flexGrow: 1,
     },
-    paper: {
-        height: 140,
-        width: 100,
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
+    // paper: {
+    //     height: 140,
+    //     width: 100,
+    //     padding: theme.spacing.unit * 2,
+    //     textAlign: 'center',
+    //     color: theme.palette.text.secondary,
+    // },
     card: {
-        maxWidth: 400,
-        maxHeight: 450
+        width: 400,
+        height: 450,
+        padding: 10
     },
     media: {
-        height: 250,
+        height: 0,
         paddingTop: '75%', // 4:9
     },
     button: {
