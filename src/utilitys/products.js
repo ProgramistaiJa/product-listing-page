@@ -1,22 +1,26 @@
 export const products = [
     {
-        name: "Bag",
-        category: "bags",
+        name: "Grand Tour",
+        category: "luggage",
         bebop: {
-            image:"CardKeeper-Bebop-Back.png",
-            price: "bbb"
+            image:"Grand-Tour-Bebop.png",
+            price: "211"
         },
         domino: {
-            image: "CardKeeper-Domino-Back.png",
-            price: "ddd"
+            image: "Grand-Tour-Domino.png",
+            price: "233"
         },
         jetty: {
-            image: "CardKeeper-Jetty-Back.png",
-            price: "jjj"
+            image: "Grand-Tour-Jetty.png",
+            price: "244"
         },
         scout: {
-            image: "CardKeeper-Scout-Back.png",
-            price: "sss"
+            image: "Grand-Tour-Scout.png",
+            price: "255"
+        },
+        bb: {
+            image: "Grand-Tour-BB.png",
+            price: "255"
         }
     },
     {
@@ -24,19 +28,19 @@ export const products = [
         category: "accessories",
         bebop: {
             image: "CardKeeper-Bebop-Back.png",
-            price: "bbb"
+            price: "155"
         },
         domino: {
             image: "CardKeeper-Domino-Back.png",
-            price: "ddd"
+            price: "122"
         },
         jetty: {
             image: "CardKeeper-Jetty-Back.png",
-            price: "jjj"
+            price: "133"
         },
         scout: {
             image: "CardKeeper-Scout-Back.png",
-            price: "sss"
+            price: "144"
         }
     },
     {
@@ -44,40 +48,35 @@ export const products = [
         category: "backpacks",
         bebop: {
             image: "Small-Bpk-Bebop.png",
-            price: "bbb"
+            price: "333"
         },
         domino: {
             image: "Small-Bpk-Domino.png",
-            price: "ddd"
+            price: "323"
         },
         jetty: {
             image: "Small-Bpk-Jetty.png",
-            price: "jjj"
+            price: "313"
         },
-        // scout: {
-        //     image: "CardKeeper-Scout-Back.png",
-        //     price: "sss"
-        // }
-
     },
     {
         name: "Accessory",
         category: "accessories",
         bebop: {
             image: "CardKeeper-Bebop-Back.png",
-            price: "bbb"
+            price: "212"
         },
         domino: {
             image: "CardKeeper-Domino-Back.png",
-            price: "ddd"
+            price: "222"
         },
         jetty: {
             image: "CardKeeper-Jetty-Back.png",
-            price: "jjj"
+            price: "232"
         },
         scout: {
             image: "CardKeeper-Scout-Back.png",
-            price: "sss"
+            price: "242"
         }
     },
     {
@@ -85,19 +84,43 @@ export const products = [
         category: "bags",
         bebop: {
             image: "Crossbody-Bebop.png",
-            price: "bbb"
+            price: "111"
         },
         domino: {
             image: "Crossbody-Domino.png",
-            price: "ddd"
+            price: "121"
         },
         jetty: {
             image: "Crossbody-Jetty.png",
-            price: "jjj"
+            price: "131"
         },
         scout: {
             image: "Crossbody-Scout.png",
-            price: "sss"
+            price: "141"
+        }
+    },
+    {
+        name: "Weekender",
+        category: "bags",
+        bebop: {
+            image: "Weekender-Bebop.png",
+            price: "315"
+        },
+        domino: {
+            image: "Weekender-Domino.png",
+            price: "325"
+        },
+        jetty: {
+            image: "Weekender-Jetty.png",
+            price: "335"
+        },
+        scout: {
+            image: "Weekender-Scout.png",
+            price: "345"
+        },
+        bb: {
+            image: "Weekender-BB.png",
+            price: "365"
         }
     }
 ];
