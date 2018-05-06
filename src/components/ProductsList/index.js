@@ -6,20 +6,6 @@ import Product from './Product';
 import Grid from 'material-ui/Grid';
 import { styles } from './style'
 
-// const styles = theme => ({
-//     root: {
-//         flexGrow: 1,
-//     },
-//     paper: {
-//         height: 140,
-//         width: 100,
-//     },
-//     control: {
-//         padding: theme.spacing.unit * 2,
-//     },
-// });
-
-
 
 class ProductsList extends React.Component {
 
@@ -29,7 +15,7 @@ class ProductsList extends React.Component {
             : true
     }
     colorsFilter(product, colors){
-        colors.length>0 && console.log(product[`${colors[0]}`]);
+        // colors.length>0 && console.log(product[`${colors[0]}`]);
 
         return colors.length > 0
             ? colors.some(color => product[`${color}`] )
