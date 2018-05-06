@@ -8,51 +8,10 @@ import { ListItemText } from 'material-ui/List';
 import Select from 'material-ui/Select';
 import Checkbox from 'material-ui/Checkbox';
 import Chip from 'material-ui/Chip';
-
-const styles = theme => ({
-    root: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    formControl: {
-        margin: theme.spacing.unit,
-        minWidth: 120,
-        maxWidth: 360,
-    },
-    chips: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    chip: {
-        margin: theme.spacing.unit / 4,
-    },
-});
-
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-    PaperProps: {
-        style: {
-            maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-            width: 250,
-        },
-    },
-};
-
-const colors = [
-    'BB',
-    'Bebop',
-    'Domino',
-    'Jetty',
-    'Scout',
-];
-
-const categories = [
-    'Bags',
-    'Backpacks',
-    'Accessories',
-    'Luggage',
-];
+import { colors } from '../../utilitys/constants/colors';
+import { categories } from '../../utilitys/constants/categories';
+import { styles } from './styles'
+import { MenuProps } from './MenuProps'
 
 class ProductsFilters extends React.Component {
     state = {
