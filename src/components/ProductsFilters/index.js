@@ -17,7 +17,7 @@ const styles = theme => ({
     formControl: {
         margin: theme.spacing.unit,
         minWidth: 120,
-        maxWidth: 359,
+        maxWidth: 360,
     },
     chips: {
         display: 'flex',
@@ -68,7 +68,7 @@ class ProductsFilters extends React.Component {
     };
 
     render () {
-        const { classes, theme } = this.props;
+        const { classes } = this.props;
         return (
             <div className={classes.root}>
                 <FormControl className={classes.formControl}>
