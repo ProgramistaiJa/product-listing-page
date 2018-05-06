@@ -21,13 +21,22 @@ const styles = theme => ({
 class ProductsList extends React.Component {
     render () {
         const { classes } = this.props;
+        const categories = ["bags"];
         return (
             <Grid container className={classes.root} spacing={16}>
                 <Grid item xs={12}>
-                    <Grid container className={classes.demo} justify="center" spacing={16}>
-                        {console.log(products)}
+                    <Grid container justify="center" spacing={16}>
+                        {console.log(categories[0])}
+
+                        {console.log(products[4].category)}
                         {
-                            products.map(product=>(
+                            products
+                                .map(product=>console.log(product.category === categories[0]))
+                        }
+                        {
+                            products
+                                .filter(product => product.category === categories[0] )
+                                .map(product=>(
                                 <Product key={product.name} product={product} />
                             ))
                         }
