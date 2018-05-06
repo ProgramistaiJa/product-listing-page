@@ -25,12 +25,12 @@ class ProductsList extends React.Component {
             <Grid container className={classes.root} spacing={16}>
                 <Grid item xs={12}>
                     <Grid container className={classes.demo} justify="center" spacing={16}>
-                    {console.log(products)}
-                    {
-                        products.map(product=>(
-                        <Product key={product.name} product={product} />
-                        ))
-                    }
+                        {console.log(products)}
+                        {
+                            products.map(product=>(
+                                <Product key={product.name} product={product} />
+                            ))
+                        }
                     </Grid>
                 </Grid>
             </Grid>
