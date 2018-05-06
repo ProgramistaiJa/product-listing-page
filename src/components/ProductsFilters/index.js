@@ -17,7 +17,7 @@ const styles = theme => ({
     formControl: {
         margin: theme.spacing.unit,
         minWidth: 120,
-        maxWidth: 300,
+        maxWidth: 360,
     },
     chips: {
         display: 'flex',
@@ -39,7 +39,7 @@ const MenuProps = {
     },
 };
 
-const names = [
+const colors = [
     'BB',
     'Bebop',
     'Domino',
@@ -47,26 +47,36 @@ const names = [
     'Scout',
 ];
 
+const categories = [
+    'Bags',
+    'Backpacks',
+    'Accessories',
+    'Luggage',
+];
+
 class ProductsFilters extends React.Component {
     state = {
-        name: [],
+        color: [],
+        category: [],
     };
 
-    handleChange = event => {
-        this.setState({ name: event.target.value });
+    handleChangeColor = event => {
+        this.setState({ color: event.target.value });
+    };
+    handleChangeCategory = event => {
+        this.setState({ category: event.target.value });
     };
 
     render () {
         const { classes, theme } = this.props;
         return (
             <div className={classes.root}>
-
                 <FormControl className={classes.formControl}>
-                    <InputLabel htmlFor="select-multiple-checkbox">Colors</InputLabel>
+                    <InputLabel htmlFor="select-multiple-checkbox">Color</InputLabel>
                     <Select
                         multiple
-                        value={this.state.name}
-                        onChange={this.handleChange}
+                        value={this.state.color}
+                        onChange={this.handleChangeColor}
                         input={<Input id="select-multiple-checkbox" />}
                         renderValue={selected => (
                             <div className={classes.chips}>
@@ -75,10 +85,33 @@ class ProductsFilters extends React.Component {
                         )}
                         MenuProps={MenuProps}
                     >
-                        {names.map(name => (
-                            <MenuItem key={name} value={name}>
-                                <Checkbox checked={this.state.name.indexOf(name) > -1} />
-                                <ListItemText primary={name} />
+                        {colors.map(color => (
+                            <MenuItem key={color} value={color}>
+                                <Checkbox checked={this.state.color.indexOf(color) > -1} />
+                                <ListItemText primary={color} />
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+
+                <FormControl className={classes.formControl}>
+                    <InputLabel htmlFor="select-multiple-checkbox">Category</InputLabel>
+                    <Select
+                        multiple
+                        value={this.state.category}
+                        onChange={this.handleChangeCategory}
+                        input={<Input id="select-multiple-checkbox" />}
+                        renderValue={selected => (
+                            <div className={classes.chips}>
+                                {selected.map(value => <Chip key={value} label={value} className={classes.chip} />)}
+                            </div>
+                        )}
+                        MenuProps={MenuProps}
+                    >
+                        {categories.map(category => (
+                            <MenuItem key={category} value={category}>
+                                <Checkbox checked={this.state.category.indexOf(category) > -1} />
+                                <ListItemText primary={category} />
                             </MenuItem>
                         ))}
                     </Select>
