@@ -17,7 +17,7 @@ const styles = theme => ({
     formControl: {
         margin: theme.spacing.unit,
         minWidth: 120,
-        maxWidth: 360,
+        maxWidth: 359,
     },
     chips: {
         display: 'flex',
