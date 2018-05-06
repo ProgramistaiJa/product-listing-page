@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import '../scss/App.css';
 import ProductsList from "./ProductsList";
 import ProductsFilters from "./ProductsFilters";
 import PageHeader from "./PageHeader";
