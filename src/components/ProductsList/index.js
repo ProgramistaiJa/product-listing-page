@@ -16,15 +16,12 @@ class ProductsList extends React.Component {
             : true
     }
     colorsFilter(product, colors){
-
         return colors && colors.length > 0
             ? colors.some(color => product[`${color}`] )
             : true
     }
     render () {
         const { classes, colors, categories } = this.props;
-        // const categories = [];
-        // const colors = [];
         return (
             <Grid container className={classes.root} spacing={16}>
                 <Grid item xs={12}>
@@ -49,7 +46,8 @@ ProductsList.propTypes = {
 };
 
 const mapStateToProps = state => ({
-    colors: state.color
+    colors: state.color,
+    categories: state.category
 });
 
 export default connect(mapStateToProps)(withStyles(styles)(ProductsList))

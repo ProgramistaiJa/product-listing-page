@@ -13,6 +13,7 @@ import { categories } from '../../utilitys/constants/categories';
 import { styles } from './styles';
 import { MenuProps } from './MenuProps';
 import { addColor } from '../../actions/color.actions';
+import { addCategory } from '../../actions/category.actions';
 import { connect } from 'react-redux';
 
 class ProductsFilters extends React.Component {
@@ -22,12 +23,14 @@ class ProductsFilters extends React.Component {
     };
 
     handleChangeColor = event => {
-        console.log({ color: event.target.value });
+        // console.log({ color: event.target.value });
         const { dispatch } = this.props;
         dispatch(addColor({ color: event.target.value }));
         this.setState({ color: event.target.value });
     };
     handleChangeCategory = event => {
+        const { dispatch } = this.props;
+        dispatch(addCategory({ category: event.target.value }));
         this.setState({ category: event.target.value });
     };
 
@@ -90,10 +93,4 @@ ProductsFilters.propTypes = {
     theme: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => {
-    return {
-        color: state.color
-    }
-};
-
-export default connect(mapStateToProps)(withStyles(styles, { withTheme: true })(ProductsFilters))
+export default connect()(withStyles(styles, { withTheme: true })(ProductsFilters))
