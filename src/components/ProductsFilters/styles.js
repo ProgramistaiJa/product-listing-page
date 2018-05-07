@@ -2,6 +2,7 @@ export const styles = theme => ({
     root: {
         display: 'flex',
         flexWrap: 'wrap',
+        justifyContent: 'center',
     },
     formControl: {
         margin: theme.spacing.unit,

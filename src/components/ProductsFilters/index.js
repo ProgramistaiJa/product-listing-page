@@ -23,7 +23,6 @@ class ProductsFilters extends React.Component {
     };
 
     handleChangeColor = event => {
-        // console.log({ color: event.target.value });
         const { dispatch } = this.props;
         dispatch(addColor({ color: event.target.value }));
         this.setState({ color: event.target.value });
