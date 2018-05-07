@@ -10,8 +10,10 @@ import Checkbox from 'material-ui/Checkbox';
 import Chip from 'material-ui/Chip';
 import { colors } from '../../utilitys/constants/colors';
 import { categories } from '../../utilitys/constants/categories';
-import { styles } from './styles'
-import { MenuProps } from './MenuProps'
+import { styles } from './styles';
+import { MenuProps } from './MenuProps';
+import { addColor } from '../../actions/color.actions';
+import { connect } from 'react-redux';
 
 class ProductsFilters extends React.Component {
     state = {
@@ -20,6 +22,9 @@ class ProductsFilters extends React.Component {
     };
 
     handleChangeColor = event => {
+        console.log({ color: event.target.value });
+        const { dispatch } = this.props;
+        dispatch(addColor({ color: event.target.value }));
         this.setState({ color: event.target.value });
     };
     handleChangeCategory = event => {
@@ -85,4 +90,10 @@ ProductsFilters.propTypes = {
     theme: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles, { withTheme: true })(ProductsFilters)
+const mapStateToProps = state => {
+    return {
+        color: state.color
+    }
+};
+
+export default connect(mapStateToProps)(withStyles(styles, { withTheme: true })(ProductsFilters))

@@ -4,27 +4,28 @@ import { withStyles } from 'material-ui/styles';
 import {products} from '../../utilitys/constants/products';
 import Product from './Product';
 import Grid from 'material-ui/Grid';
-import { styles } from './style'
+import { styles } from './style';
+import { connect } from 'react-redux';
 
 
 class ProductsList extends React.Component {
 
     categoriesFilter(product, categories){
-        return categories.length > 0
+        return categories && categories.length > 0
             ? categories.some(category => category === product.category)
             : true
     }
     colorsFilter(product, colors){
         // colors.length>0 && console.log(product[`${colors[0]}`]);
 
-        return colors.length > 0
+        return colors && colors.length > 0
             ? colors.some(color => product[`${color}`] )
             : true
     }
     render () {
-        const { classes } = this.props;
-        const categories = [];
-        const colors = ["scout", "jetty"];
+        const { classes, colors, categories } = this.props;
+        // const categories = [];
+        // const colors = [];
         return (
             <Grid container className={classes.root} spacing={16}>
                 <Grid item xs={12}>
@@ -48,4 +49,8 @@ ProductsList.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ProductsList)
+const mapStateToProps = state => ({
+    colors: state.colors
+});
+
+export default connect(mapStateToProps)(withStyles(styles)(ProductsList))
