@@ -1,7 +1,7 @@
 export const colors = [
-    'BB',
-    'Bebop',
-    'Domino',
-    'Jetty',
-    'Scout',
+    'bb',
+    'bebop',
+    'domino',
+    'jetty',
+    'scout',
 ];

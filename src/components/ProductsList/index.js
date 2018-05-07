@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-import {products} from '../../utilitys/products';
+import {products} from '../../utilitys/constants/products';
 import Product from './Product';
 import Grid from 'material-ui/Grid';
 import { styles } from './style'
