@@ -16,7 +16,6 @@ class ProductsList extends React.Component {
             : true
     }
     colorsFilter(product, colors){
-        // colors.length>0 && console.log(product[`${colors[0]}`]);
 
         return colors && colors.length > 0
             ? colors.some(color => product[`${color}`] )
@@ -50,7 +49,7 @@ ProductsList.propTypes = {
 };
 
 const mapStateToProps = state => ({
-    colors: state.colors
+    colors: state.color
 });
 
 export default connect(mapStateToProps)(withStyles(styles)(ProductsList))
