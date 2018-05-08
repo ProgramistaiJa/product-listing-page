@@ -32,7 +32,7 @@ class Product extends React.Component {
                 <Card className={classes.card}>
                     <CardMedia
                         className={classes.media}
-                        image={`/static/images/products/${product.category}/${this.state.image}`}
+                        image={require(`../../img/products/${product.category}/${this.state.image}`)}
                         title={`${product.name}`}
                     />
                     <CardContent>
