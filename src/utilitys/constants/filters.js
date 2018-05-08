@@ -1,6 +1,0 @@
-export const actionsConstans = {
-    ADD_COLOR: 'ADD_COLOR',
-    REMOVE_COLOR: 'REMOVE_COLOR',
-    ADD_CATEGORY: 'ADD_CATEGORY',
-    REMOVE_CATEGORY: 'REMOVE_CATEGORY',
-};
